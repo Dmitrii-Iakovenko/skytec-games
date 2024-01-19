@@ -2,9 +2,9 @@ package service;
 
 import model.Clan;
 
-// Есть сервис, посвященный кланам.
-// Да это выглядит как 'репозиторий'.
-// Но это сервис, просто все остальные методы не нужны для примера
+import java.util.Optional;
+
 public interface ClanService {
-    Clan get(long clanId);
+    Optional<Clan> getClan(long clanId);
+    boolean changeClanGold(long clanId, int reward);
 }
